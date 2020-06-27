@@ -24,8 +24,6 @@ def welcomeScreen():
 
     playerx = int(SCREENWIDTH/5)
     playery = int((SCREENHEIGHT - GAME_SPRITES['player'].get_height())/2)
-    # messagex = int((SCREENWIDTH - GAME_SPRITES['message'].get_width())/2)
-    # messagey = int(SCREENHEIGHT*0.13)
     basex = 0
     while True:
         for event in pygame.event.get():
@@ -41,8 +39,6 @@ def welcomeScreen():
                 
                 SCREEN.blit(GAME_SPRITES['background'], (0, 0))    
                 SCREEN.blit(GAME_SPRITES['message'], (0,0 ))    
-                # SCREEN.blit(GAME_SPRITES['pipe'][0], (0,0 ))    
-                # SCREEN.blit(GAME_SPRITES['pipe'][1], (0,600-int(GAME_SPRITES['pipe'][1].get_height()) ))    
                 SCREEN.blit(GAME_SPRITES['base'], (basex,GROUNDY))
                 SCREEN.blit(GAME_SPRITES['player'], (playerx, playery))    
                     
@@ -75,7 +71,6 @@ def mainGame():
 
     playerVelY = 0
     playerMaxVelY = 10
-    # playerMinVelY = 0
     playerAccY = 1
 
     playerFlapAccv = -10 # velocity while flapping
