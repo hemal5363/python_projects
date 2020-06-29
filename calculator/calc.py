@@ -7,15 +7,10 @@ def callback(input):
     :return:
     '''
     if input.isdigit():
-        # print(input)
         return True
-
     elif input == "":
-        # print(input)
         return True
-
     else:
-        # print(input)
         return False
 
 def add():
@@ -68,10 +63,8 @@ if __name__ == '__main__':
 
     # frame2
     f = Frame(frame, background="gray")
-    Radiobutton(f, text="+", value="+", variable=option, font="Arial 25", indicator=0).pack(padx=10, pady=10, fill=BOTH, expand=YES, side=LEFT)
-    Radiobutton(f, text="-", value="-", variable=option, font="Arial 25", indicator=0).pack(padx=10, pady=10, fill=BOTH, expand=YES, side=LEFT)
-    Radiobutton(f, text="*", value="*", variable=option, font="Arial 25", indicator=0).pack(padx=10, pady=10, fill=BOTH, expand=YES, side=LEFT)
-    Radiobutton(f, text="/", value="/", variable=option, font="Arial 25", indicator=0).pack(padx=10, pady=10, fill=BOTH, expand=YES, side=LEFT)
+    for i in ['+','-','*','/']:
+        Radiobutton(f, text=i, value=i, variable=option, font="Arial 25", indicator=0).pack(padx=10, pady=10, fill=BOTH, expand=YES, side=LEFT)
     f.pack(fill=BOTH, expand=YES)
 
     # frame3
